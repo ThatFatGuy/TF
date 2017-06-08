@@ -8,7 +8,10 @@ Bioc Breseq for Tom Finn
 ```bash
 export PATH=/usr/local/bin/bowtie2-2.2.8/:$PATH
 
+export PATH=/Volumes/BiochemXsan/staff_groups/lamontlab/breseq/bin/:$PATH
+
 ```
+This will need to be done EVERY time you open a new terminal - the server is not set up to automatically find where Bowtie2 and Breseq is. Be careful to ensure this is correctly written too. If it is written incorrectly then a path will be set to nothing which will reset all paths (i think) and you will have to restart in a new terminal.
 
 > Navigate to directory containing your sequences
 
@@ -30,8 +33,7 @@ ILLUMINACLIP:/usr/local/bin/Trimmomatic-0.35/adapters/TruSeq3-PE.fa:2:30:10 LEAD
 > Run BREseq on TRIMMED samples (Even raw samples can work with Breseq - i just prefer to trim first).
 
 ```bash
-/Volumes/BiochemXsan/staff_groups/lamontlab/breseq/bin/breseq -j 20 -r REFERENCE.gbff -o sampleX_output output1_forward_reads.fastq.gz \
-output1_reverse_reads.fastq.gz
+breseq -j 20 -r REFERENCE.gbff -o sampleX_output output1_forward_reads.fastq.gz output1_reverse_reads.fastq.gz
 
 ```
 
