@@ -3,6 +3,13 @@ Bioc Breseq for Tom Finn
 
 >Log into the bioc server via command line/terminal - It just occurred to me that breseq is now installed on biochemcompute . . . this will save heaps of time
 
+>unfortunatley the way the serve is structured, elements of bowtie2 (mapping) arent defaultly in your PATH- this will need to be done everytime you open a new terminal
+
+```bash
+export PATH=/usr/local/bin/bowtie2-2.3.2/:$PATH
+
+```
+
 > Navigate to directory containing your sequences
 
 ```bash
